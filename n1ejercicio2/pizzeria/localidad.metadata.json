@@ -1,0 +1,1 @@
+{"options":{"validator":{"$jsonSchema":{"bsonType":"object","title":"localidad","properties":{"nombre":{"bsonType":"string"},"id_provincia":{"bsonType":"objectId"}}}}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"9aab25d7ac7c4978bc97cea186145a8e","collectionName":"localidad","type":"collection"}

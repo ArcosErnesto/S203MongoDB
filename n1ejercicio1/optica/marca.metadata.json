@@ -1,0 +1,1 @@
+{"options":{"validator":{"$jsonSchema":{"bsonType":"object","title":"marca","properties":{"nombre":{"bsonType":"string"},"id_proveedor":{"bsonType":"objectId"}}}}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"b5a183fa158f45c0b00189d7c15a8919","collectionName":"marca","type":"collection"}

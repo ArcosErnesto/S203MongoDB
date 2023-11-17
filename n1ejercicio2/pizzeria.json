@@ -1,0 +1,31 @@
+
+db.createCollection( 'tienda', {validator: {$jsonSchema: {bsonType: 'object',title:'tienda',properties: {direccion: {bsonType: 'string'},codigo_postal: {bsonType: 'string'},id_localidad: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'trabajador', {validator: {$jsonSchema: {bsonType: 'object',title:'trabajador',properties: {nombre: {bsonType: 'string'},apellidos: {bsonType: 'string'},nif: {bsonType: 'string'},telefono: {bsonType: 'string'},cocinero: {bsonType: 'bool'},repartidor: {bsonType: 'bool'},id_tienda: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'cliente', {validator: {$jsonSchema: {bsonType: 'object',title:'cliente',properties: {nombre: {bsonType: 'string'},apellidos: {bsonType: 'string'},direccion: {bsonType: 'string'},id_localidad: {bsonType: 'objectId'},telefono: {bsonType: 'string'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'provincia', {validator: {$jsonSchema: {bsonType: 'object',title:'provincia',properties: {nombre: {bsonType: 'string'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'localidad', {validator: {$jsonSchema: {bsonType: 'object',title:'localidad',properties: {nombre: {bsonType: 'string'},id_provincia: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'pedido', {validator: {$jsonSchema: {bsonType: 'object',title:'pedido',properties: {fecha_hora: {bsonType: 'date'},entrega_domicilio: {bsonType: 'bool'},productos: {bsonType: 'array'},precio: {bsonType: 'double'},id_cliente: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'pedido_reparto', {validator: {$jsonSchema: {bsonType: 'object',title:'pedido_reparto',properties: {id_pedido: {bsonType: 'objectId'},id_empleado: {bsonType: 'objectId'},fecha_hora: {bsonType: 'date'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'categoria_producto', {validator: {$jsonSchema: {bsonType: 'object',title:'categoria_producto',properties: {nombre: {bsonType: 'string'},id_categoria_producto: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'categoria_pizza', {validator: {$jsonSchema: {bsonType: 'object',title:'categoria_pizza',properties: {nombre: {bsonType: 'string'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'producto', {validator: {$jsonSchema: {bsonType: 'object',title:'producto',properties: {nombre: {bsonType: 'string'},descripcion: {bsonType: 'string'},imagen: {bsonType: 'string'},precio: {bsonType: 'double'},id_categoria_producto: {bsonType: 'objectId'},id_categoria_pizza: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  

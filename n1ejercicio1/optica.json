@@ -1,0 +1,19 @@
+
+db.createCollection( 'proveedores', {validator: {$jsonSchema: {bsonType: 'object',title:'proveedores',properties: {nombre: {bsonType: 'string'},direccion_calle: {bsonType: 'string'},direccion_num: {bsonType: 'int'},direccion_piso: {bsonType: 'string'},direccion_puerta: {bsonType: 'string'},direccion_cuidad: {bsonType: 'string'},codigo_postal: {bsonType: 'string'},pais: {bsonType: 'string'},telefono: {bsonType: 'string'},fax: {bsonType: 'string'},nif: {bsonType: 'string'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'gafas', {validator: {$jsonSchema: {bsonType: 'object',title:'gafas',properties: {id_marca: {bsonType: 'objectId'},graduacionL: {bsonType: 'decimal'},graduacionR: {bsonType: 'decimal'},tipo_montura: {bsonType: 'string'},color_montura: {bsonType: 'string'},color_cristal: {bsonType: 'string'},precio: {bsonType: 'decimal'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'marca', {validator: {$jsonSchema: {bsonType: 'object',title:'marca',properties: {nombre: {bsonType: 'string'},id_proveedor: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'cliente', {validator: {$jsonSchema: {bsonType: 'object',title:'cliente',properties: {nombre: {bsonType: 'string'},direccion_calle: {bsonType: 'string'},direccion_num: {bsonType: 'int'},direccion_piso: {bsonType: 'string'},direccion_puerta: {bsonType: 'string'},direccion_cuidad: {bsonType: 'string'},codigo_postal: {bsonType: 'string'},pais: {bsonType: 'string'},telefono: {bsonType: 'string'},email: {bsonType: 'string'},fecha_registro: {bsonType: 'date'},id_cliente_recomendador: {bsonType: 'objectId'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'empleado', {validator: {$jsonSchema: {bsonType: 'object',title:'empleado',properties: {nombre: {bsonType: 'string'},nif: {bsonType: 'string'},telefono: {bsonType: 'string'},fecha_contratacion: {bsonType: 'date'}}         }      },
+autoIndexId:true
+});  
+db.createCollection( 'venta', {validator: {$jsonSchema: {bsonType: 'object',title:'venta',properties: {fecha_venta: {bsonType: 'date'},cliente_id: {bsonType: 'objectId'},empleado_id: {bsonType: 'objectId'},gafas: {bsonType: 'array'},precio: {bsonType: 'double'}}         }      },
+autoIndexId:true
+});  
